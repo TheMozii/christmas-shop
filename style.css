@@ -1,0 +1,841 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Montserrat", sans-serif;
+   scroll-behavior: smooth;
+   letter-spacing: 0.05em;
+   color: #181c29;
+}
+
+.container{
+   max-width: 1440px;
+   margin: 0 auto;
+}
+
+header{
+   height: 64px;
+   padding: 0px 82px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   font-size: 12px;
+   font-weight: 600;
+   line-height: 15px;
+   text-transform: uppercase;
+}
+
+header a{
+   text-decoration: unset;
+}
+
+.headerLogo{
+   display: flex;
+   gap: 8px;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   width: 141px;
+   height: 40px;
+   border-radius: 12px;
+}
+
+.headerLogo img{
+   width: 24px;
+   height: 24px;
+}
+
+header ul{
+   list-style: none;
+   display: flex;
+   gap: 8px;
+}
+
+header li a{
+   padding: 12px 20px;
+   cursor: pointer;
+   border-radius: 12px;
+   transition: all 0.3s;
+}
+
+.headerNavigationButton{
+   display: none;
+}
+
+.navigationWindow{
+   position: fixed;
+   display: flex;
+   width: 100%;
+   height: 100%;
+   background-color: #FFFFFF;
+   justify-content: center;
+   align-items: center;
+   left: 0;
+   transform: translateX(100%); 
+   transition: transform 0.3s ease-in-out; 
+   z-index: 999; 
+}
+.navigationWindow.open{
+   transform: translateX(0);
+}
+
+.navigationWindow ul{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 8px;
+   list-style: none;
+}
+
+.navigationWindow li{
+   cursor: pointer;
+   height: 60px;
+   display: flex;
+   align-items: center;
+}
+
+.navigationWindow a{
+   text-decoration: none;
+   padding: 12px 20px;
+   text-transform: uppercase;
+   font-size: 24px;
+   line-height: 36px;
+   font-weight: 600;
+   letter-spacing: 0.16em;
+}
+
+main{
+   transition: opacity 0.3s ease-in-out;
+   opacity: 1;
+}
+ 
+main.hidden{
+   opacity: 0;
+}
+ 
+.mainHome{
+   background: url(./assets/home/snow.png);
+   background-color: #FF4646;
+   background-size: 100% auto;
+   border-radius: 20px;
+}
+
+.heroSec{
+   background: url(./assets/home/bg-ball\ 1.svg) no-repeat center;
+   background-size: cover;
+   height: 524px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   overflow: hidden;
+}
+
+.heroSecText{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+   height: 426px;
+   gap: 12px;
+   text-align: center;
+}
+
+.allura{
+   font-family: "Allura", cursive;
+   font-weight: 400;
+   font-size: 24px;
+   line-height: 24px;
+   letter-spacing: 0.05em;
+}
+
+h1{
+   color: #fff;
+   font-size: 32px;
+   line-height: 48px;
+   font-weight: 600;
+   letter-spacing: 0.18em;
+   text-transform: uppercase;
+}
+
+.magicalGiftsButton{
+   text-transform: uppercase;
+   font-size: 12px;
+   line-height: 15px;
+   letter-spacing: 0.05em;
+   background: #181c29;
+   border: unset;
+   padding: 20px 32px;
+   border-radius: 20px;
+   transition: all 0.3s;
+   cursor: pointer;
+   width: fit-content;
+   color: #fff;
+   text-decoration: none;
+}
+
+.aboutSec{
+   min-height: 648px;
+   padding: 60px 82px;
+}
+
+.aboutSecBox{
+   display: flex;
+   background-color: #FFFFFF;
+   border-radius: 20px;
+}
+
+.aboutSecBox img{
+   border-radius: 20px;
+   width: 50%;
+   object-fit: cover;
+}
+
+.aboutSecText{
+   width: 50%;
+   display: flex;
+   align-items: center;
+   padding: 100px;
+   padding-left: 60px;
+   padding-right: 150px;
+}
+
+.aboutSecTextBox{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+h2{
+   letter-spacing: 0.16em;
+   font-size: 24px;
+   line-height: 36px;
+   font-weight: 600;
+   text-transform: uppercase;
+}
+
+.aboutParag{
+   font-size: 16px;
+   letter-spacing: 0.001em;
+   line-height: 24px;
+}
+
+.sliderSec{
+   padding: 60px 82px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   position: relative;
+   overflow: hidden;
+}
+
+.sliderSecText{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 12px;
+}
+
+.sliderSecSlider{
+   position: relative;
+   height: 200px;
+}
+
+.sliderSecSliderBox{
+   display: flex;
+   align-items: center;
+   position: absolute;
+   transition: left 0.3s ease;
+   gap: 20px;
+}
+
+.sliderSecSlider p{
+   color: #FFFFFF;
+   font-size: 80px;
+   font-weight: 600;
+   line-height: 97px;
+   letter-spacing: 0.0001em;
+   text-transform: uppercase;
+}
+
+.sliderSecSlider img{
+   border-radius: 20px;
+   width: 200px;
+   height: 200px;
+}
+
+.sliderSecButtons{
+   display: flex;
+   flex-direction: row;
+   justify-content: end;
+   gap: 20px;
+}
+
+.sliderSecButtons button{
+   background: unset;
+   border-radius: 20px;
+   width: 56px;
+   height: 56px;
+   border: 1px solid #FFFFFF;
+   transition: all 0.3s;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.bestGiftsSec{
+   min-height: 554px;
+   padding: 60px 82px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.bestGiftsSecText{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 12px;
+}
+
+.bestGiftsSecBox{
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   flex-wrap: wrap;
+   gap: 12px;
+}
+
+.bestGiftsSecBoxCard{
+   width: 310px;
+   height: 342px;
+   background: #ecf3f8;
+   border-radius: 20px;
+   cursor: pointer;
+}
+
+.bestGiftsSecBoxCardImg{
+   border-radius: 20px 20px 0px 0px;
+   height: 230px;
+}
+
+.bestGiftsSecBoxCardText{
+   background-color: #FFFFFF;
+   height: 112px;
+   border-radius: 20px;
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   text-align: start;
+   gap: 8px;
+}
+
+h4{
+   font-size: 12px;
+   font-weight: 600;
+   line-height: 16px;
+   letter-spacing: 0.05em;
+   text-transform: uppercase;
+}
+
+h3{
+   font-size: 16px;
+   font-weight: 600;
+   line-height: 24px;
+   letter-spacing: 0.08em;
+   transition: all 0.3s;
+   text-transform: uppercase;
+   color: #181C29;
+}
+
+.CTASec{
+   background: url(assets/home/bg-forest.png) no-repeat center;
+   background-size: auto 100%;
+   min-height: 668px;
+   padding: 60px 82px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.CTASecBox{
+   height: 428px;
+   max-width: 426px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   gap: 20px;
+}
+
+.CTASecBoxTimer{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 8px;
+}
+
+.CTASecBoxTimerBox{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   background: rgba(255, 255, 255, 0.4);
+   border-radius: 20px;
+   padding: 8px 12px 12px 12px;
+}
+
+.CTASecBoxTimerBorder{
+   height: 20px;
+   border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.CTASecBoxTimerBoxtime{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 80px;
+}
+
+.CTASecBoxTimerBoxtime h2{
+   color: #FFFFFF;
+}
+
+footer{
+   transition: opacity 0.3s ease-in-out;
+   opacity: 1;
+}
+ 
+footer.hidden{
+   opacity: 0;
+}
+
+.footerContactsBox{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 12px;
+}
+
+.footerContactsBox a{
+   border-radius: 20px;
+   height: 204px;
+   width: 417px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 12px;
+   cursor: pointer;
+   background: rgba(236, 243, 248, 1);
+}
+
+.footerContactsBox img{
+   width: 80px;
+   height: 80px;
+}
+
+.footerContactsBox p{
+   font-size: 24px;
+   font-weight: 600;
+   line-height: 36px;
+   letter-spacing: 0.16em;
+   text-transform: uppercase;
+   transition: all 0.3s;
+}
+
+footer{
+   min-height: 496px;
+   padding: 60px 82px;
+   display: flex;
+   flex-direction: column;
+   gap: 60px;
+}
+
+.footerSocialmedia{
+   height: 112px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 12px;
+}
+
+.footerSocialmediaLinks{
+   display: flex;
+   flex-direction: row;
+   gap: 12px;
+}
+
+.footerSocialmedia p{
+   letter-spacing: 0.001em;
+   height: 24px;
+   display: flex;
+   align-items: center;
+}
+
+.footerSocialmediaLinks a{
+   height: 40px;
+   width: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.footerSocialmediaLinks a svg path{
+   transition: 0.3s;
+}
+
+.footerSocialmedia a{
+   transition: 0.3s;
+}
+
+.mainGift{
+   border-radius: 20px;
+   background: url(assets/Gifts/bg-garland.svg) no-repeat center;
+   background-color: #FF4646;
+   background-size: 100% auto;
+   background-position: top;
+   padding: 60px 82px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
+   justify-content: center;
+   text-align: center;
+}
+
+.giftButtons{
+   transition: all 0.3s;
+}
+
+#upButton{
+   display: none;
+   width: 56px;
+   height: 56px;
+   border-radius: 100px;
+   border: 1px solid #ff4646;
+   cursor: pointer;
+   position: fixed;
+   right: 10px;
+   bottom: 10px;
+}
+
+.giftsNavigationPanel{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 8px;
+}
+
+.giftsNavigationPanel button{
+   padding: 12px 20px;
+   border: none;
+   background: unset ;
+   color: #FFFFFF;
+   font-size: 12px;
+   font-weight: 600;
+   line-height: 16px;
+   text-transform: uppercase;
+   border-radius: 12px;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+}
+
+.giftsH1Box{
+   display: flex;
+}
+
+.modal{
+   top: 0;
+   z-index: 1;
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(24, 28, 41, 0.8);
+   display: none;
+   justify-content: center;
+   align-items: center;
+}
+
+.modalContainer{
+   height: 514px;
+   max-width: 400px;
+   border-radius: 20px;
+   background-color: #ecf3f8;
+   position: fixed;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.modalCloseImg{
+   height: 40px !important;
+   width: 40px !important;
+   position: absolute;
+   top: 12px;
+   right: 12px;
+   cursor: pointer;
+}
+
+.modalInfo{
+   background-color: #FFFFFF;
+   border-radius: 20px;
+   width: 100%;
+   height: 284px;
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
+}
+
+.modalInfoText{
+   height: 104px;
+   text-align: start;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   gap: 8px;
+}
+
+.modalInfoText p{
+   letter-spacing: 0.001em;
+   line-height: 24px;
+}
+
+.modalInfoAdds{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: start;
+   gap: 8px;
+}
+
+.modalInfoAddsContainer{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.modalInfoAddsContainerBox{
+   height: 24px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.modalInfoAddsContainerBoxStars{
+   display: flex;
+   gap: 12px;
+   align-items: center;
+}
+
+.modalInfoAddsContainerBoxStarsImg{
+   display: flex;
+   gap: 8px;
+   align-items: center;
+}
+
+.modalInfoAddsContainerBoxStarsImg img{
+   width: 16px;
+   height: 16px;
+}
+
+@media screen and (max-width: 1009px){
+
+   header{
+      padding: 0 8px;
+   }
+
+   .aboutSec{
+      padding: 60px 8px;
+   }
+
+   .aboutSecBox{
+      height: 528px;
+   }
+
+   .aboutSecText{
+      padding: 42px 60px;
+   }
+
+   .sliderSec{
+      height: 488px;
+      padding: 60px 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+      overflow: hidden;
+   }  
+
+   footer{
+      padding: 60px 8px;
+   }
+
+   .footerContactsBox{
+      width: 100%;
+   }
+
+   .footerContactsBox a{
+      width: 100%;
+   }
+}
+
+@media screen and (max-width: 795px){
+
+   .bestGiftsSec{
+      padding: 60px 8px;
+   } 
+
+   .mainGift{
+      padding: 60px 8px;
+   }
+
+}
+
+@media screen and (max-width: 768px) {
+   header ul{
+      display: none;
+   }
+
+   .headerNavigationButton{
+      width: 40px;
+      height: 40px;
+      display: block;
+      position: relative;
+      cursor: pointer;
+   }
+
+   .headerNavigationButton::after,
+   .headerNavigationButton::before{
+      content: '';
+      border-bottom: 1px solid #181C29;
+      position: absolute;
+      width: 20px;
+      left: 10px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+   }
+
+   .headerNavigationButton::after{
+      top: 16px;
+   }
+
+   .headerNavigationButton::before{
+      bottom: 16px;
+   }
+
+   .headerNavigationButton.active::after{
+      top: 50%;
+      transform: rotate(45deg);
+   }
+
+   .headerNavigationButton.active::before{
+      bottom: 48%;
+      transform: rotate(-45deg);
+   }
+}
+
+@media screen and (max-width: 600px) {
+
+   .aboutSecBox{
+      flex-direction: column;
+      height: 880px;
+   }
+
+   .aboutSecText{
+      padding: 60px 20px;
+      width: auto;
+      text-align: start;
+   }
+
+   .aboutSecBox img{
+      width: 100%;
+      height: 552px;
+   }
+}
+
+@media screen and (max-width: 503px){
+   .giftsNavigationPanel{
+      gap: 0;
+   }
+
+   .giftsNavigationPanel button{
+      height: 40px;
+      padding: 12px 8px;
+      letter-spacing: 0.05em;
+   }
+
+   .heroSec{
+      height: 572px;
+   }
+
+   .CTASec{
+      height: 704px;
+      padding: 60px 8px;
+   }
+
+   .aboutSec{
+      height: 1000px;
+   }
+
+   .modal{
+      padding-left: 8px;
+      padding-right: 8px;
+   }
+
+   .modalContainer{
+      width: 364px;
+   }
+}
+
+@media (hover: hover) and (pointer: fine) {
+   .hover:hover a {
+      color: #FF4646;
+      background-color: rgba(255, 70, 70, 0.1);
+   }
+
+   .magicalGiftsButton:hover {
+      background-color: #FFFFFF;
+      color: #181C29;
+   }
+
+   .bestGiftsSecBoxCard:hover h3 {
+      color: #FF4646;
+   }
+
+   .sliderSecButtons button:hover {
+      background-color: #FFFFFF;
+   }
+
+   .sliderSecButtons button:hover svg path {
+      stroke: #FF4646;
+   }
+
+   .footerSocialmediaLinks a:hover svg path {
+      stroke: #FF4646;
+   }
+
+   .footerContactsBox a:hover p {
+      color: #FF4646;
+   }
+
+   .footerContactsBox a:hover h3 {
+      color: #FF4646;
+   }
+
+   .footerSocialmedia a:hover {
+      color: #FF4646;
+   }
+
+   .giftButtons:hover{
+      background-color: rgba(255, 255, 255, 0.2);
+   }
+}
